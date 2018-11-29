@@ -13,6 +13,7 @@ class Blockchain():
             self.prev_block = new_block.pow_on_block()
             self.db.put(0, pickle.dumps(self.prev_block))
             self.db.put('latest', 0)
+            self.height = 0
     
     def add_block(self, data):
         new_block = Block(self.height + 1, data, self.prev_block.hash).pow_on_block()

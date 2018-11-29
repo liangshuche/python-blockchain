@@ -7,7 +7,7 @@ class Block():
         self.prev_block_hash = prev_block_hash
         self.data = data
         self.timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
-        self.bits = 12
+        self.bits = 16
         self.nonce = 0
         self.hash = None
         
