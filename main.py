@@ -19,11 +19,11 @@ args = parser.parse_args()
 
 bc = Blockchain()
 
-if (args.command == 'addblock'):
+if (args.command == 'addblock' and args.transactions):
     bc.add_block(args.transactions)
 elif (args.command == 'printchain'):
     bc.print_chain()
-elif (args.command == 'printblock'):
+elif (args.command == 'printblock' and args.height):
     bc.print_block(args.height)
 elif (args.command == 'resetdb'):
     DB().reset()
